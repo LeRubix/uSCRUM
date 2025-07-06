@@ -1,0 +1,72 @@
+{
+  "name": "uSCRUM",
+  "version": "1.0.0",
+  "description": "A modern SCRUM board application for project management",
+  "main": "public/electron.js",
+  "homepage": "./",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "build": "cd client && npm run build && cd .. && electron-builder",
+    "build-client": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "electron": "electron .",
+    "electron-dev": "concurrently \"npm run server\" \"npm run client\" \"wait-on http://localhost:5000/api/health && wait-on http://localhost:3000 && electron .\"",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [
+    "scrum",
+    "kanban",
+    "project-management",
+    "react",
+    "node",
+    "electron",
+    "desktop"
+  ],
+  "author": "Rubix",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.10.0",
+    "electron-is-dev": "^2.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^27.1.3",
+    "electron-builder": "^24.8.1",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.rubix.uscrum",
+    "productName": "uSCRUM",
+    "files": [
+      "client/build/**/*",
+      "server/**/*",
+      "public/electron.js",
+      "public/icon.png",
+      "package.json",
+      "!server/scrum_board.db"
+    ],
+    "directories": {
+      "buildResources": "public"
+    },
+    "afterPack": "scripts/afterPack.js",
+    "win": {
+      "icon": "public/icon.png",
+      "target": "nsis"
+    },
+    "mac": {
+      "icon": "public/icon.icns",
+      "category": "public.app-category.productivity"
+    },
+    "linux": {
+      "icon": "public/icon.png",
+      "category": "Office"
+    },
+    "asar": false,
+    "nodeGypRebuild": false,
+    "npmRebuild": false
+  }
+}

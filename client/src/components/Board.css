@@ -1,0 +1,133 @@
+.board-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.board-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.board-info {
+  flex: 1;
+}
+
+.board-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.board-created-date {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  margin: 0 0 0.5rem 0;
+  font-style: italic;
+}
+
+.board-description {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.board-stats {
+  display: flex;
+  gap: 2rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+.board-content {
+  flex: 1;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.columns-container {
+  display: flex;
+  gap: 1.5rem;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 1rem;
+}
+
+.board-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.board-empty h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.board-empty p {
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .board-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .board-stats {
+    gap: 1rem;
+  }
+
+  .board-title {
+    font-size: 1.5rem;
+  }
+
+  .board-created-date {
+    font-size: 0.8125rem;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .board-content {
+    padding: 1rem;
+  }
+
+  .columns-container {
+    gap: 1rem;
+  }
+} 

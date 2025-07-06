@@ -1,0 +1,360 @@
+.header {
+  background-color: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  max-width: 100%;
+}
+
+.header-left .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.theme-toggle {
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--background-color);
+  transform: rotate(15deg);
+}
+
+.board-selector {
+  position: relative;
+}
+
+.board-selector-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 200px;
+}
+
+.board-selector-btn:hover {
+  background-color: var(--surface-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.board-name {
+  flex: 1;
+  text-align: left;
+}
+
+.board-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 0.25rem;
+}
+
+.board-list {
+  padding: 0.5rem;
+}
+
+.board-item {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  background: none;
+  text-align: left;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.board-item:hover {
+  background-color: var(--background-color);
+}
+
+.board-item.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.board-item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.board-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.board-item-name {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: inherit;
+}
+
+.board-item-desc {
+  font-size: 0.75rem;
+  opacity: 0.8;
+  color: inherit;
+}
+
+.board-item-actions {
+  display: flex;
+  gap: 0.25rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.board-item:hover .board-item-actions {
+  opacity: 1;
+}
+
+.board-item.active .board-item-actions {
+  opacity: 1;
+}
+
+.delete-board-btn {
+  padding: 0.25rem;
+  border: none;
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--error-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-board-btn:hover {
+  background: var(--error-color);
+  color: white;
+}
+
+.board-item.active .delete-board-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.board-item.active .delete-board-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.board-dropdown-footer {
+  padding: 0.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Delete confirmation modal */
+.delete-confirmation {
+  text-align: center;
+}
+
+.delete-confirmation .warning-icon {
+  color: var(--error-color);
+  margin-bottom: 1rem;
+}
+
+.delete-confirmation p {
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.delete-confirmation .board-name-highlight {
+  font-weight: 600;
+  color: var(--error-color);
+}
+
+.btn-danger {
+  background-color: var(--error-color);
+  color: white;
+  border: 1px solid var(--error-color);
+}
+
+.btn-danger:hover {
+  background-color: #dc2626;
+  border-color: #dc2626;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-content {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .header-center {
+    order: 3;
+    flex: none;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .board-selector-btn {
+    min-width: 100%;
+  }
+  
+  .header-right {
+    order: 2;
+    gap: 0.5rem;
+  }
+
+  .theme-toggle {
+    padding: 0.375rem;
+  }
+
+  .backup-import-buttons {
+    display: none;
+  }
+}
+
+.backup-import-buttons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.backup-import-buttons .btn {
+  font-size: 0.8125rem;
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;
+}
+
+.backup-import-buttons .btn svg {
+  margin-right: 0.375rem;
+}
+
+/* File input styling */
+.file-input-hidden {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Responsive adjustments for backup/import buttons */
+@media (max-width: 1024px) {
+  .backup-import-buttons .btn {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.5rem;
+  }
+  
+  .backup-import-buttons .btn svg {
+    margin-right: 0.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-right {
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+  
+  .backup-import-buttons {
+    flex: 1;
+    justify-content: flex-start;
+    order: 1;
+    margin-bottom: 0.5rem;
+  }
+  
+  .backup-import-buttons .btn {
+    flex: 1;
+    min-width: 0;
+    font-size: 0.75rem;
+    padding: 0.375rem 0.5rem;
+  }
+  
+  .backup-import-buttons .btn span {
+    display: none;
+  }
+  
+  .backup-import-buttons .btn svg {
+    margin-right: 0;
+  }
+} 
