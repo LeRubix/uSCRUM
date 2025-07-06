@@ -7,9 +7,15 @@ A modern, sleek, and simple SCRUM board application for project management with 
 ![Node.js](https://img.shields.io/badge/Node.js-Express-green)
 ![SQLite](https://img.shields.io/badge/Database-SQLite-orange)
 
+<br>
+
+![image](https://github.com/user-attachments/assets/5f494c12-969f-4ab7-b133-81329e2949ac)
+![image](https://github.com/user-attachments/assets/4bc3f6cf-d999-49e0-9599-05455525fc81)
+<br>
+
 ## Features
 
-### ✨ Core Features
+### ❗ Core Features
 - **Drag & Drop Interface**: Intuitive task management with beautiful drag-and-drop functionality
 - **Multiple Boards**: Create and manage multiple project boards
 - **Task Management**: Create, edit, delete, and organize tasks
@@ -272,9 +278,8 @@ Feel free to contribute to this project, but all builds must be open source.
 
 This project is open source and available under the GNU GENERAL PUBLIC LICENSE.
 
-## Acknowledgments
 
-- React Beautiful DnD for drag-and-drop functionality
-- Lucide React for beautiful icons
-- SQLite for lightweight local storage
-- Express.js for the robust backend framework 
+<br>
+<br>
+
+Thank you for checking out uSCRUM, I hope you enjoy it! This is my first attempt at a truly modern and sleek web frontend application. Like most of my projects, I made it because it was something I wanted to use myself, so I hope anyone who sees this finds it useful and a pleasure to use as well :)
