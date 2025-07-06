@@ -76,8 +76,8 @@ A modern, sleek, and simple SCRUM board application for project management with 
 
 3. **Launch the application**
    After installation, you can launch uSCRUM from:
-   - **Start Menu**: Search for "uSCRUM" or find it in your programs list
-   - **Desktop**: Double-click the uSCRUM shortcut (if created during installation)
+   - **Start Menu**: Search for "uSCRUM" or find it in your programs/recently added list
+   - **Desktop**: Run the uSCRUM shortcut
    - **Direct path**: `%LOCALAPPDATA%\Programs\uSCRUM\uSCRUM.exe`
 
 The application runs completely offline and stores all your data locally on your machine.
@@ -151,11 +151,6 @@ If you prefer to set up the backend and frontend separately:
 - Create multiple boards for different projects or sprints
 - Switch between boards using the dropdown in the header
 - Each board maintains its own set of columns and tasks
-
-### Keyboard Shortcuts
-- **Escape**: Close modals and dropdowns
-- **Enter**: Submit forms
-- **Tab**: Navigate between form fields
 
 ## API Endpoints
 
