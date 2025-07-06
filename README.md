@@ -278,10 +278,11 @@ Feel free to contribute to this project, but all builds must be open source.
 
 This project is open source and available under the GNU GENERAL PUBLIC LICENSE.
 
-
 <br>
-## End Notes:
+
+## Footnotes
 
 Thank you for checking out uSCRUM, I hope you enjoy it! <br>
 This is my first attempt at a truly modern and sleek web frontend application. Like most of my projects, I made it because it was something I wanted to use myself, so I hope anyone who sees this finds it useful and a pleasure to use as well :) <br>
-(Part of this readme was written using AI, Nothing within the actual program is AI generated, and I can assure high-quality usage as this is a program I use myself)
+
+*(Part of this readme was written using AI, Nothing within the actual program is AI generated, and I can assure high-quality usage as this is a program I use myself)*
